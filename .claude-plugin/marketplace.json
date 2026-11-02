@@ -1,0 +1,25 @@
+{
+  "name": "numera",
+  "description": "Numera, enkel bokföring för enskild firma och aktiebolag. Claude läser bokföringen och lägger in förslag som utkast, du bokför själv.",
+  "owner": {
+    "name": "Pontus Magnusson",
+    "email": "support@usenumera.se"
+  },
+  "plugins": [
+    {
+      "name": "numera",
+      "source": "./plugins/numera",
+      "description": "Arbetsflöden för Numera: kom igång, översikt, bokför utkast, kontrollera, moms och månadsavslut. Installera också numera-server eller numera-mac."
+    },
+    {
+      "name": "numera-server",
+      "source": "./plugins/numera-server",
+      "description": "Kopplar Claude Code till Numera via Numeras server med adressen du skapar i Numera (Inställningar, Claude och ChatGPT)."
+    },
+    {
+      "name": "numera-mac",
+      "source": "./plugins/numera-mac",
+      "description": "Kopplar Claude Code till Numera-appen på din Mac (lokalt, inget lämnar datorn utom till Claude)."
+    }
+  ]
+}

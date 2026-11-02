@@ -1,0 +1,14 @@
+{
+  "name": "numera",
+  "displayName": "Numera",
+  "version": "0.1.0",
+  "description": "Arbetsflöden för bokföringsprogrammet Numera: kom igång, översikt, bokför utkast, kontrollera bokföringen, moms och månadsavslut. Allt Claude gör blir utkast som du granskar och bokför själv i Numera.",
+  "author": {
+    "name": "Pontus Magnusson",
+    "email": "support@usenumera.se",
+    "url": "https://usenumera.se"
+  },
+  "homepage": "https://usenumera.se",
+  "repository": "https://github.com/Pontus-beepboop/Numera-Plugin-Claude",
+  "keywords": ["bokföring", "moms", "sverige", "numera", "bas"]
+}

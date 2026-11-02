@@ -1,0 +1,21 @@
+{
+  "name": "numera-mac",
+  "displayName": "Numera på Mac",
+  "version": "0.1.0",
+  "description": "Kopplar Claude Code till Numera-appen på din Mac. Kräver att Numera ligger i Program-mappen och att Låt Claude och ChatGPT hjälpa till är påslaget under Inställningar, AI-hjälp.",
+  "author": {
+    "name": "Pontus Magnusson",
+    "email": "support@usenumera.se",
+    "url": "https://usenumera.se"
+  },
+  "homepage": "https://usenumera.se",
+  "repository": "https://github.com/Pontus-beepboop/Numera-Plugin-Claude",
+  "keywords": ["bokföring", "numera", "mcp", "mac"],
+  "dependencies": ["numera"],
+  "mcpServers": {
+    "numera": {
+      "command": "/Applications/Numera.app/Contents/MacOS/Numera",
+      "args": ["--mcp"]
+    }
+  }
+}

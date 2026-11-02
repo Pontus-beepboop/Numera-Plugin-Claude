@@ -1,0 +1,30 @@
+{
+  "name": "numera-server",
+  "displayName": "Numera via servern",
+  "version": "0.1.0",
+  "description": "Kopplar Claude Code till din bokföring i Numera via Numeras server. Adressen skapar du i Numera under Inställningar, Claude och ChatGPT. Adressen är nyckeln till bokföringen och sparas i datorns nyckelring.",
+  "author": {
+    "name": "Pontus Magnusson",
+    "email": "support@usenumera.se",
+    "url": "https://usenumera.se"
+  },
+  "homepage": "https://usenumera.se",
+  "repository": "https://github.com/Pontus-beepboop/Numera-Plugin-Claude",
+  "keywords": ["bokföring", "numera", "mcp"],
+  "dependencies": ["numera"],
+  "userConfig": {
+    "mcp_url": {
+      "type": "string",
+      "title": "Adress från Numera",
+      "description": "Adressen som Numera visar när du skapar en koppling för Claude, t.ex. https://app.usenumera.se/mcp/... Den är hemlig: den som har den kan läsa bokföringen tills du tar bort kopplingen i Numera.",
+      "required": true,
+      "sensitive": true
+    }
+  },
+  "mcpServers": {
+    "numera": {
+      "type": "http",
+      "url": "${user_config.mcp_url}"
+    }
+  }
+}
