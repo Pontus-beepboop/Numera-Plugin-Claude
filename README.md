@@ -1,49 +1,105 @@
-# Numera för Claude Code
+# Numera för Claude
 
-Plugin-marknad för [Numera](https://usenumera.se), ett enkelt svenskt bokföringsprogram för enskild firma och aktiebolag. Med pluginen kan Claude Code läsa din bokföring och lägga in förslag som **utkast**. Claude bokför aldrig, ändrar aldrig bokförda verifikationer och tar aldrig bort något. Du granskar och bokför själv i Numera.
+Med det här tillägget kan Claude hjälpa dig med bokföringen i [Numera](https://usenumera.se). Claude kan läsa din bokföring, förklara den på enkel svenska och lägga in förslag på hur kvitton och fakturor ska bokföras.
 
-## Installera
+**Claude bokför aldrig själv.** Allt Claude gör hamnar som **utkast** i Numera. Du tittar igenom och trycker på Bokför själv.
 
-```
-/plugin marketplace add Pontus-beepboop/Numera-Plugin-Claude
-```
+Det tar ungefär fem minuter att komma igång. Du behöver inte kunna något om programmering.
 
-Välj sedan **ett** av sätten att koppla till Numera:
+---
 
-| Plugin | När | Vad som behövs |
-|---|---|---|
-| `numera-server` | Alla datorer, webben | En adress från Numera: Inställningar, Claude och ChatGPT, skapa koppling. Klistras in när Claude Code frågar och sparas i nyckelringen. |
-| `numera-mac` | Numera-appen på samma Mac | Numera i Program-mappen och "Låt Claude och ChatGPT hjälpa till" påslaget under Inställningar, AI-hjälp. |
+## Det här behöver du
 
-```
-/plugin install numera-server@numera
-```
+- **Claude-appen** på din dator (Mac eller Windows). Ladda ner den gratis på [claude.com/download](https://claude.com/download).
+- **Ett betalt Claude-abonnemang** (Pro, Max, Team eller Enterprise). Tillägg fungerar inte med gratisversionen.
+- **Numera**, med ett Numera-konto.
 
-eller
+---
 
-```
-/plugin install numera-mac@numera
-```
+## Steg 1: Lägg till Numera i Claude
 
-Arbetsflödena (`numera`) installeras automatiskt med.
+Det här gör du en gång.
 
-## Kommandon
+1. Öppna **Claude-appen**.
+2. Klicka på **Customize** (Anpassa) i menyn till vänster.
+3. Klicka på fliken **Plugins**.
+4. Vid **Personal plugins**, klicka på **+** och sedan **Add marketplace**.
+5. Välj **Add from a repository**.
+6. Klistra in den här texten exakt som den står och klicka på **Sync**:
 
-| Kommando | Gör |
+   ```
+   Pontus-beepboop/Numera-Plugin-Claude
+   ```
+
+Nu finns **Numera** i listan över tillägg.
+
+> Får du felet "sync failed": kontrollera att du klistrade in texten ovan utan `https://` framför och utan mellanslag.
+
+---
+
+## Steg 2: Koppla Claude till din bokföring
+
+Välj **ett** av sätten nedan.
+
+### A. Du använder Numera-appen på en Mac (enklast)
+
+1. Flytta **Numera** till mappen **Program** om den inte redan ligger där.
+2. Öppna Numera och gå till **Inställningar → AI-hjälp**. Slå på **Låt Claude och ChatGPT hjälpa till**.
+3. I Claude-appen, gå till **Customize → Plugins**, öppna **Numera** och klicka på **Install** vid **Numera på Mac**.
+4. Stäng Claude-appen helt (⌘Q) och öppna den igen.
+
+### B. Du använder Numera på webben, på Windows eller bara på iPhone
+
+1. Logga in på [app.usenumera.se](https://app.usenumera.se) (eller öppna Numera-appen).
+2. Gå till **Inställningar → Claude och ChatGPT** (i appen: **Inställningar → Numera-konto → Claude och ChatGPT**).
+3. Klicka på **Skapa koppling**, läs varningen och godkänn.
+4. **Kopiera adressen** som visas. Den visas bara en gång, så låt fönstret vara öppet tills du är klar.
+5. I Claude-appen, gå till **Customize → Connectors**, klicka på **+** och välj **Add custom connector**.
+6. Skriv **Numera** som namn, klistra in adressen och klicka på **Add**.
+7. Gå sedan till **Customize → Plugins**, öppna **Numera** och klicka på **Install** vid **Numera** (arbetsflödena).
+
+> Adressen är som en nyckel till din bokföring. Dela den inte med någon. Har den kommit ut: ta bort kopplingen i Numera och skapa en ny.
+
+---
+
+## Steg 3: Prova
+
+Starta en ny chatt i Claude och skriv till exempel:
+
+- *Hur går det för mitt företag?*
+- *Bokför mina utkast i Numera*
+- *Kolla om något saknas i bokföringen*
+
+Du kan också skriva **/** i chatten och välja ett av Numeras kommandon i listan:
+
+| Kommando | Vad det gör |
 |---|---|
-| `/numera:setup` | Kopplar och kontrollerar att allt fungerar |
-| `/numera:start` | Översikt: vinst, moms med sista dag, banken, utkast |
-| `/numera:bokfor` | Lägger in kontering med förklaring i utkasten |
-| `/numera:kolla` | Kontrollerar bokföringen utan att ändra något |
-| `/numera:moms` | Förbereder momsdeklarationen |
-| `/numera:manad` | Månadsavslut med bankavstämning |
+| **setup** | Kontrollerar att kopplingen fungerar och hjälper dig om något saknas |
+| **start** | Kort översikt: vinst, moms att betala och sista dag, pengar på banken, utkast |
+| **bokfor** | Föreslår hur dina kvitton och fakturor ska bokföras (blir utkast) |
+| **kolla** | Letar efter fel och luckor, ändrar ingenting |
+| **moms** | Hjälper dig förbereda momsdeklarationen |
+| **manad** | Går igenom månaden och stämmer av mot banken |
 
-## Säkerhet
+Förslagen dyker upp under **Utkast** i Numera. Öppna dem, kontrollera och tryck på **Bokför**.
 
-- Bokföringen skickas till Anthropic när Claude läser den. Numera varnar och ber om ett godkännande innan kopplingen skapas.
-- Adressen till Numeras server är en nyckel. Ta bort kopplingen i Numera om den kan ha kommit ut.
-- Allt Claude föreslår kontrolleras av Numera (debet = kredit, kontona finns, metod och momsregistrering) och visas som utkast.
+---
 
-## Ansvar
+## Om något inte fungerar
 
-Numera är ett hjälpmedel. Låt gärna en redovisningskonsult granska bokslutet.
+| Problem | Gör så här |
+|---|---|
+| Claude säger att den inte hittar Numera | Stäng Claude-appen helt och öppna den igen. Skriv sedan *Hjälp mig koppla Numera* och följ instruktionerna. |
+| Sätt A: inget händer | Kontrollera att Numera ligger i **Program** och att **Låt Claude och ChatGPT hjälpa till** är påslaget. Numera behöver inte vara öppet, det startar av sig självt. |
+| Sätt B: "kan inte ansluta" | Adressen kan ha kopierats fel. Ta bort kopplingen i Claude (**Customize → Connectors**), skapa en ny koppling i Numera och lägg till den igen. |
+| Jag hittar inte **Add from a repository** | Uppdatera Claude-appen till senaste versionen. |
+| Något annat | Mejla [support@usenumera.se](mailto:support@usenumera.se). |
+
+---
+
+## Bra att veta
+
+- När Claude läser din bokföring skickas den till Anthropic (företaget bakom Claude). Numera varnar och ber om ditt godkännande innan kopplingen skapas.
+- Claude kan bara skapa utkast. Den kan inte bokföra, inte ändra något som redan är bokfört och inte ta bort något.
+- Numera kontrollerar varje förslag (att debet och kredit går jämnt ut, att kontona finns och att momsen stämmer med företagets inställningar).
+- Numera och Claude är hjälpmedel. Kontrollera alltid momsdeklarationen innan du skickar in den, och låt gärna en redovisningskonsult titta på bokslutet.

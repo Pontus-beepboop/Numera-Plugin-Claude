@@ -10,11 +10,11 @@ Fråga vilken månad det gäller om användaren inte har sagt det (standard: fö
 ## Steg
 
 1. `get_company`: metod, momsperiod, låst läge och deadlines.
-2. **Utkast i månaden.** `list_drafts`, filtrera på månaden. Alla ska bokföras eller tas bort i Numera. Erbjud `/numera:bokfor`.
+2. **Utkast i månaden.** `list_drafts`, filtrera på månaden. Alla ska bokföras eller tas bort i Numera. Erbjud att föreslå bokföring för dem (skillen `bokfor`).
 3. **Bankavstämning.** `account_balances` med `to` = månadens sista dag och `accounts: "1930"`. Be användaren om saldot på kontoutdraget samma dag. Skiljer det: lista månadens verifikationer på 1930 (`list_vouchers` med `account: 1930`) och hjälp till att hitta skillnaden. Bokför inget, föreslå i stället vad som saknas.
 4. **Obetalda fakturor.** Fakturametoden: saldon på 1510 och 2440. Kontantmetoden: obetalda fakturor ligger som utkast och bokförs när de betalas.
 5. **Löner.** Finns lönekonton (7010-7299) i månaden: påminn om arbetsgivardeklarationen den 12:e månaden efter (17:e i januari och augusti) och att den görs under Löner i Numera.
-6. **Moms.** Slutar momsperioden med månaden: erbjud `/numera:moms`.
+6. **Moms.** Slutar momsperioden med månaden: erbjud att förbereda momsdeklarationen (skillen `moms`).
 7. **Skattekontot.** Saldo på 1630 jämfört med Skatteverkets skattekonto, om användaren har det.
 
 ## Resultat
@@ -23,5 +23,5 @@ En checklista med bockar för det som är klart och tydliga åtgärder för rest
 
 ## Regler
 
-- Bara läsning, utom om användaren ber om ett förslag; då gäller reglerna i `/numera:bokfor` och allt blir utkast.
+- Bara läsning, utom om användaren ber om ett förslag; då gäller reglerna i skillen `bokfor` och allt blir utkast.
 - Låst period: förklara att rättelser görs i en öppen period.

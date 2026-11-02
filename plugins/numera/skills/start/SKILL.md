@@ -21,4 +21,4 @@ description: Ger en kort översikt över företaget i Numera på enkel svenska, 
 - Siffrorna kommer alltid från Numera, aldrig från minnet eller egna uppskattningar.
 - Säg tydligt om bokföringen är i **testläge** (då är siffrorna övningsdata).
 - Ge inga råd om skatteplanering som kräver en redovisningskonsult; säg det i stället.
-- Verktygen är bara läsning här. Föreslå `/numera:bokfor`, `/numera:kolla`, `/numera:moms` eller `/numera:manad` som nästa steg.
+- Verktygen är bara läsning här. Erbjud som nästa steg att bokföra utkasten, kontrollera bokföringen, förbereda momsen eller göra månadsavslut (skillsen `bokfor`, `kolla`, `moms`, `manad`).
