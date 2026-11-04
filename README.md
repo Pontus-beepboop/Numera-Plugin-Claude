@@ -75,6 +75,7 @@ Du kan också skriva **/** i chatten och välja ett av Numeras kommandon i lista
 | Kommando | Vad det gör |
 |---|---|
 | **setup** | Kontrollerar att kopplingen fungerar och hjälper dig om något saknas |
+| **foretag** | Sätter upp ett nytt företag i chatten: slår upp organisationsnumret och frågar bara det som saknas |
 | **start** | Kort översikt: vinst, moms att betala och sista dag, pengar på banken, utkast |
 | **bokfor** | Föreslår hur dina kvitton och fakturor ska bokföras (blir utkast) |
 | **kolla** | Letar efter fel och luckor, ändrar ingenting |
