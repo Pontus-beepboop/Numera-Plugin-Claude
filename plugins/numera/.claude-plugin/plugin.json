@@ -1,8 +1,8 @@
 {
   "name": "numera",
   "displayName": "Numera",
-  "version": "0.1.2",
-  "description": "Arbetsflöden för bokföringsprogrammet Numera i Claude: sätt upp företaget, översikt, bokför utkast, kontrollera bokföringen, moms och månadsavslut. Allt Claude gör blir utkast som du granskar och bokför själv i Numera.",
+  "version": "0.2.0",
+  "description": "Arbetsflöden för bokföringsprogrammet Numera i Claude: sätt upp företaget, översikt, bokför utkast, kontrollera bokföringen, moms och månadsavslut. Claude lägger förslag som utkast och bokför bara när du ber om det, och visar allt den bokfört.",
   "author": {
     "name": "Pontus Magnusson",
     "email": "support@usenumera.se",

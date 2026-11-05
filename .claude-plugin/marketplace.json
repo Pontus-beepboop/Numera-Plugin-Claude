@@ -1,6 +1,6 @@
 {
   "name": "numera",
-  "description": "Numera, enkel bokföring för enskild firma och aktiebolag. Claude läser bokföringen och lägger in förslag som utkast, du bokför själv.",
+  "description": "Numera, enkel bokföring för enskild firma och aktiebolag. Claude läser bokföringen, lägger in förslag som utkast och bokför när du ber om det.",
   "owner": {
     "name": "Pontus Magnusson",
     "email": "support@usenumera.se"
@@ -9,7 +9,7 @@
     {
       "name": "numera",
       "source": "./plugins/numera",
-      "description": "Arbetsflöden för Numera i Claude: översikt, bokför utkast, kontrollera, moms och månadsavslut. Allt blir utkast som du bokför själv."
+      "description": "Arbetsflöden för Numera i Claude: översikt, bokför utkast, kontrollera, moms och månadsavslut. Claude bokför bara när du ber om det och visar allt den bokfört."
     },
     {
       "name": "numera-mac",

@@ -2,7 +2,7 @@
 
 Med det här tillägget kan Claude hjälpa dig med bokföringen i [Numera](https://usenumera.se). Claude kan läsa din bokföring, förklara den på enkel svenska och lägga in förslag på hur kvitton och fakturor ska bokföras.
 
-**Claude bokför aldrig själv.** Allt Claude gör hamnar som **utkast** i Numera. Du tittar igenom och trycker på Bokför själv.
+**Claude bokför när du ber om det, och visar allt den gjort.** Säg "bokför utkasten" eller "gör klart juni", så konterar och bokför Claude och listar varje verifikation den bokfört. Ber du bara om förslag hamnar allt som **utkast** som du bokför själv i Numera.
 
 Det tar ungefär fem minuter att komma igång. Du behöver inte kunna något om programmering.
 
@@ -101,6 +101,6 @@ Förslagen dyker upp under **Utkast** i Numera. Öppna dem, kontrollera och tryc
 ## Bra att veta
 
 - När Claude läser din bokföring skickas den till Anthropic (företaget bakom Claude). Numera varnar och ber om ditt godkännande innan kopplingen skapas.
-- Claude kan bara skapa utkast. Den kan inte bokföra, inte ändra något som redan är bokfört och inte ta bort något.
+- Claude bokför bara när du ber om det. Varje verifikation som Claude bokför märks "Bokförd av Claude" och syns i behandlingshistoriken. Claude kan inte ändra något som redan är bokfört och inte ta bort något; ett fel rättar du med knappen Rätta i Numera.
 - Numera kontrollerar varje förslag (att debet och kredit går jämnt ut, att kontona finns och att momsen stämmer med företagets inställningar).
 - Numera och Claude är hjälpmedel. Kontrollera alltid momsdeklarationen innan du skickar in den, och låt gärna en redovisningskonsult titta på bokslutet.

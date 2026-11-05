@@ -1,11 +1,11 @@
 ---
 name: bokfor
-description: Går igenom kvitton och fakturor som väntar som utkast i Numera och lägger in en komplett kontering med förklaring i varje utkast. Bokför aldrig själv. Använd när användaren vill bokföra sina utkast, kvitton eller underlag i Numera.
+description: Går igenom kvitton och fakturor som väntar som utkast i Numera, lägger in en komplett kontering med förklaring och bokför dem när användaren ber om det, och visar sedan allt som bokfördes. Använd när användaren vill bokföra sina utkast, kvitton eller underlag i Numera, eller säger t.ex. "gör klart juni".
 ---
 
 # Bokför utkasten i Numera
 
-Claude föreslår, användaren bokför. Varje förslag blir ett utkast som användaren granskar i Numera.
+Ber användaren dig **bokföra** ("bokför utkasten", "bokför allt", "gör klart juni") konterar du och bokför sedan med `book_vouchers`. Ber användaren bara om **förslag**, eller är det oklart, lägger du utkast som användaren bokför själv. Allt du bokför ska visas för användaren.
 
 ## Arbetsgång
 
@@ -17,7 +17,8 @@ Claude föreslår, användaren bokför. Varje förslag blir ett utkast som anvä
    3. Behövs ett konto: `search_accounts`. Använd bara konton som finns i Numeras kontoplan.
    4. `propose_booking` med `voucher_id`, alla rader (debet = kredit på öret), `explanation` på enkel svenska (2-4 meningar), `warnings` för det användaren måste kontrollera och `questions` om något avgörande saknas. Sätt `confidence` ärligt.
    5. Om svaret visar fel: rätta och anropa igen. Ge inte upp efter ett fel, men gissa inte heller.
-4. **Rapportera** i en tabell: utkast, motpart, belopp, föreslagna konton, säkerhet, och vad användaren behöver kontrollera. Påminn om att bokföringen sker i Numera.
+4. **Bokför (bara om användaren bad om det).** `book_vouchers` med id på de utkast som är klara. Bokför inte utkast som har fel, där `confidence` är under 0,7 eller där en fråga är obesvarad: lämna dem som utkast och säg varför.
+5. **Rapportera** i en tabell: verifikationsnummer (eller "Utkast"), datum, motpart, belopp, konton och vad användaren behöver kontrollera. Lista först allt som bokfördes, sedan det som ligger kvar som utkast. Säg att ett fel i en bokförd verifikation rättas med knappen Rätta i Numera.
 
 ## Auktoritetsordning
 

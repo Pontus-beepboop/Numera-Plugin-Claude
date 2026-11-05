@@ -5,7 +5,7 @@ description: Kopplar Claude till bokföringsprogrammet Numera och kontrollerar a
 
 # Koppla Claude till Numera
 
-Numera är ett svenskt bokföringsprogram för enskild firma och aktiebolag. Claude kan läsa bokföringen och lägga in förslag som **utkast**, men aldrig bokföra, ändra bokförda verifikationer eller ta bort något. Användaren granskar och bokför själv i Numera.
+Numera är ett svenskt bokföringsprogram för enskild firma och aktiebolag. Claude kan läsa bokföringen, lägga in förslag som **utkast** och bokföra utkast när användaren uttryckligen ber om det (`book_vouchers`). Claude kan aldrig ändra bokförda verifikationer eller ta bort något.
 
 Användaren är ofta inte van vid datorer eller bokföring. Skriv kort, på enkel svenska, ett steg i taget, och säg exakt vad som ska klickas på.
 
@@ -33,7 +33,7 @@ Fungerar det inte efter det: be användaren starta om Claude-appen och försöka
 
 ## 3. Bekräfta
 
-Visa i två eller tre meningar: företagets namn, företagsform, om bokföringen är i testläge eller låst läge, och hur många utkast som väntar. Erbjud sedan en översikt över företaget (skillen `start`) eller att föreslå bokföring för utkasten (skillen `bokfor`) om det finns utkast.
+Visa i två eller tre meningar: företagets namn, företagsform, om bokföringen är i testläge eller låst läge, och hur många utkast som väntar. Erbjud sedan en översikt över företaget (skillen `start`) eller att bokföra utkasten (skillen `bokfor`) om det finns utkast.
 
 ## Säkerhet
 
