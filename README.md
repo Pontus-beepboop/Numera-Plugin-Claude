@@ -80,6 +80,7 @@ Du kan också skriva **/** i chatten och välja ett av Numeras kommandon i lista
 | **bokfor** | Föreslår hur dina kvitton och fakturor ska bokföras (blir utkast) |
 | **kolla** | Letar efter fel och luckor, ändrar ingenting |
 | **moms** | Hjälper dig förbereda momsdeklarationen |
+| **dagskassa** | Dagens försäljning med kort, Swish, kassa, Zettle och Stripe: lägger in dagar som utkast, läser av Z-rapporter och bokar utbetalningar |
 | **manad** | Går igenom månaden och stämmer av mot banken |
 
 Förslagen dyker upp under **Utkast** i Numera. Öppna dem, kontrollera och tryck på **Bokför**.
