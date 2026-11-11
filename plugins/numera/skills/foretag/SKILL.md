@@ -9,7 +9,11 @@ description: Sätter upp ett nytt företag i Numera direkt i chatten, slår upp 
 
 1. Anropa `get_company`. Är ett företag redan upplagt: säg det och avsluta (ändringar görs under Inställningar i Numera).
 2. Fråga efter **organisationsnumret** (för enskild firma är det personnumret). Anropa `lookup_company`.
-3. Bekräfta det registret hittade (namn, företagsform, adress) med användaren. Hittades inget: fråga efter företagsform och namn.
+3. Titta på `status` i svaret:
+   - `found`: bekräfta det registret hittade (namn, företagsform, adress) med användaren.
+   - `choose`: visa kandidaterna och låt användaren välja.
+   - `not_found`: företaget finns inte i registret (enskilda firmor saknas ofta). Fråga efter företagsform och namn.
+   - `unavailable`: registret går inte att nå just nu. Säg det kort (det betyder inte att företaget saknas) och fråga efter företagsform och namn.
 4. Fråga bara det som står i `still_to_ask`, en sak i taget och på enkel svenska:
    - Momsregistrerat? Om ja: momsperiod (månad, kvartal eller år). Osäker: det står på registreringsbeviset från Skatteverket.
    - Kontantmetoden eller fakturametoden. Förklara kort: kontantmetoden bokför fakturor när de betalas och passar de flesta små enskilda firmor.

@@ -13,7 +13,7 @@ Fråga vilken månad det gäller om användaren inte har sagt det (standard: fö
 2. **Utkast i månaden.** `list_drafts`, filtrera på månaden. Alla ska bokföras eller tas bort i Numera. Erbjud att bokföra dem (skillen `bokfor`).
 3. **Bankavstämning.** `account_balances` med `to` = månadens sista dag och `accounts: "1930"`. Be användaren om saldot på kontoutdraget samma dag. Skiljer det: lista månadens verifikationer på 1930 (`list_vouchers` med `account: 1930`) och hjälp till att hitta skillnaden. Bokför inget, föreslå i stället vad som saknas.
 4. **Obetalda fakturor.** Fakturametoden: saldon på 1510 och 2440. Kontantmetoden: obetalda fakturor ligger som utkast och bokförs när de betalas.
-5. **Löner.** Finns lönekonton (7010-7299) i månaden: påminn om arbetsgivardeklarationen den 12:e månaden efter (17:e i januari och augusti) och att den görs under Löner i Numera.
+5. **Löner.** `payroll_summary` för månaden: bruttolön, skatt, arbetsgivaravgift, om arbetsgivardeklarationen är lämnad och betald, och lönebesked som inte är bokförda. Påminn om arbetsgivardeklarationen den 12:e månaden efter (17:e i januari och augusti), som görs under Löner i Numera. Är arbetsgivaravgiften 0 kr för någon med lön: be användaren kontrollera personnumret (född 1937 eller tidigare ger 0 kr, Skatteverkets testnummer 19121212-1212 också).
 6. **Moms.** Slutar momsperioden med månaden: erbjud att förbereda momsdeklarationen (skillen `moms`).
 7. **Skattekontot.** Saldo på 1630 jämfört med Skatteverkets skattekonto, om användaren har det.
 
