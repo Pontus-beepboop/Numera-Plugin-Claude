@@ -81,7 +81,8 @@ Du kan också skriva **/** i chatten och välja ett av Numeras kommandon i lista
 | **kolla** | Kör Numeras kontroller och letar efter fel och luckor, också i lönerna. Ändrar ingenting |
 | **moms** | Hjälper dig förbereda momsdeklarationen |
 | **dagskassa** | Dagens försäljning med kort, Swish, kassa, Zettle och Stripe: lägger in dagar som utkast, läser av Z-rapporter och bokar utbetalningar |
-| **manad** | Går igenom månaden: utkast, banken, fakturor, löner och moms |
+| **personal** | Frånvaro, sjukdom, vab, semester och timmar för de anställda, semestersaldo och det som behöver göras (provanställning, anställningsbevis, Försäkringskassan). Allt räknas in i nästa lön |
+| **manad** | Går igenom månaden: utkast, banken, fakturor, löner, personal och moms |
 
 Förslagen dyker upp under **Utkast** i Numera. Öppna dem, kontrollera och tryck på **Bokför**.
 

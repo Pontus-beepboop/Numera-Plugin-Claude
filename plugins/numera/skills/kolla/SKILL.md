@@ -18,7 +18,7 @@ Bara läsning. Anropa aldrig `propose_booking` i den här skillen.
    - Aktiebolag: 2893 i debet betyder att bolaget har lånat ut pengar till ägaren, vilket normalt är förbjudet (ABL 21 kap.).
    - 1510 och 2440 med gamla poster (fakturametoden): obetalda kund- och leverantörsfakturor.
    - 2650 eller 1630 som inte går ihop med det Numera visar för momsen och skattekontot.
-6. **Löner.** Finns lönekonton (7010-7299): `payroll_summary`. Är arbetsgivaravgiften 0 kr för någon med lön är personen född 1937 eller tidigare enligt personnumret. Det är ovanligt: be användaren kontrollera personnumret under Löner (Skatteverkets testnummer 19121212-1212 ger alltid 0 kr).
+6. **Löner.** Finns lönekonton (7010-7299): `payroll_summary`. Är arbetsgivaravgiften 0 kr för någon med lön är personen född 1937 eller tidigare enligt personnumret. Det är ovanligt: be användaren kontrollera personnumret under Löner (Skatteverkets testnummer 19121212-1212 ger alltid 0 kr). Finns anställda: `personnel_reminders` för det som är försenat eller snart ska göras (provanställning, anställningsbevis, anmälan till Försäkringskassan, semesterår, rapporter som väntar på godkännande).
 7. **Deadlines** från `get_company` (moms, och arbetsgivardeklaration den 12:e om det finns löner).
 
 ## Resultat
