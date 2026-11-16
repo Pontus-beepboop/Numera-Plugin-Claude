@@ -80,6 +80,7 @@ Du kan också skriva **/** i chatten och välja ett av Numeras kommandon i lista
 | **bokfor** | Föreslår hur dina kvitton och fakturor ska bokföras och bokför när du ber om det. Ge Claude en bild eller PDF av ett kvitto så läggs den in i Numera |
 | **kolla** | Kör Numeras kontroller och letar efter fel och luckor, också i lönerna. Ändrar ingenting |
 | **moms** | Hjälper dig förbereda momsdeklarationen |
+| **kvitton** | Letar kvitton och fakturor i din e-post med Kvittokollen, går också igenom mejlen som Numeras regler inte kände igen, söker i mejlens innehåll efter en säljare eller ett belopp och hämtar in det som saknas som utkast |
 | **dagskassa** | Dagens försäljning med kort, Swish, kassa, Zettle och Stripe: lägger in dagar som utkast, läser av Z-rapporter och bokar utbetalningar |
 | **personal** | Frånvaro, sjukdom, vab, semester och timmar för de anställda, semestersaldo och det som behöver göras (provanställning, anställningsbevis, Försäkringskassan). Allt räknas in i nästa lön |
 | **manad** | Går igenom månaden: utkast, banken, fakturor, löner, personal och moms |
