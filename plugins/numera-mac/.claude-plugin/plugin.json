@@ -1,8 +1,8 @@
 {
   "name": "numera-mac",
   "displayName": "Numera på Mac",
-  "version": "0.1.1",
-  "description": "Kopplar Claude till Numera-appen på din Mac. Kräver att Numera ligger i Program-mappen och att Låt Claude och ChatGPT hjälpa till är påslaget under Inställningar, AI-hjälp.",
+  "version": "0.1.2",
+  "description": "Kopplar Claude till Numera-appen på din Mac. Kräver att Numera är installerat (helst i Program-mappen) och att Låt Claude och ChatGPT hjälpa till är påslaget under Inställningar, AI-hjälp.",
   "author": {
     "name": "Pontus Magnusson",
     "email": "support@usenumera.se",
@@ -21,9 +21,10 @@
   ],
   "mcpServers": {
     "numera": {
-      "command": "/Applications/Numera.app/Contents/MacOS/Numera",
+      "command": "/bin/sh",
       "args": [
-        "--mcp"
+        "-c",
+        "for app in \"/Applications/Numera.app/Contents/MacOS/Numera\" \"$HOME/Applications/Numera.app/Contents/MacOS/Numera\"; do if [ -x \"$app\" ]; then exec \"$app\" --mcp; fi; done; found=$(/usr/bin/mdfind \"kMDItemCFBundleIdentifier == 'se.pontusmagnusson.Numera'\" 2>/dev/null | /usr/bin/head -n 1); if [ -n \"$found\" ] && [ -x \"$found/Contents/MacOS/Numera\" ]; then exec \"$found/Contents/MacOS/Numera\" --mcp; fi; echo \"Numera hittades inte på den här Macen. Lägg Numera i mappen Program och starta om Claude.\" >&2; exit 1"
       ]
     }
   }
