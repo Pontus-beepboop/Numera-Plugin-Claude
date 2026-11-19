@@ -8,17 +8,18 @@ description: Ger en kort översikt över företaget i Numera på enkel svenska, 
 ## Arbetsgång
 
 1. Anropa `get_company`. Läs företagsform, metod (faktura- eller kontantmetoden), momsperiod, testläge/låst läge och översikten.
-2. Skriv en kort översikt, högst tio rader, på enkel svenska utan facktermer som inte förklaras:
+2. Anropa `list_notifications`: inkomna e-fakturor som väntar och raderna i Att göra, samma som klockan i Numera.
+3. Skriv en kort översikt, högst tio rader, på enkel svenska utan facktermer som inte förklaras:
    - Resultat hittills i år (vinst eller förlust).
    - Moms för pågående period och **sista dag att deklarera och betala**. Räkna inte om momsen själv, använd Numeras siffra.
    - Pengar på banken, vad kunder är skyldiga och vad företaget är skyldigt leverantörer.
    - Beräknad skatt att spara till, om Numera visar en.
-   - Hur många utkast som väntar.
-3. Avsluta med de en till tre viktigaste sakerna att göra nu, i ordning efter datum. Exempel: "Bokför de 4 utkasten", "Momsen för juli till september ska vara inne 12 november".
+   - Hur många utkast som väntar, och om det har kommit e-fakturor.
+4. Avsluta med de en till tre viktigaste sakerna att göra nu, i ordning efter datum. Exempel: "Bokför de 4 utkasten", "Momsen för juli till september ska vara inne 12 november".
 
 ## Principer
 
 - Siffrorna kommer alltid från Numera, aldrig från minnet eller egna uppskattningar.
 - Säg tydligt om bokföringen är i **testläge** (då är siffrorna övningsdata).
 - Ge inga råd om skatteplanering som kräver en redovisningskonsult; säg det i stället.
-- Verktygen är bara läsning här. Erbjud som nästa steg att bokföra utkasten, kontrollera bokföringen, förbereda momsen eller göra månadsavslut (skillsen `bokfor`, `kolla`, `moms`, `manad`).
+- Verktygen är bara läsning här. Erbjud som nästa steg att bokföra utkasten, kontrollera bokföringen, förbereda momsen eller göra månadsavslut (skillsen `bokfor`, `kolla`, `moms`, `manad`), eller att skapa en faktura (`faktura`).

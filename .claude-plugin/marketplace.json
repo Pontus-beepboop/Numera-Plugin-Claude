@@ -9,8 +9,8 @@
     {
       "name": "numera",
       "source": "./plugins/numera",
-      "description": "Arbetsflöden för Numera i Claude: översikt, bokför utkast, kvitton i e-posten, kontrollera, personal, moms, månadsavslut och dagskassa. Claude bokför bara när du ber om det och visar allt den bokfört.",
-      "version": "0.6.0"
+      "description": "Arbetsflöden för Numera i Claude: översikt, fakturor, bokför utkast, kvitton i e-posten, kontrollera, personal, moms, månadsavslut och dagskassa. Claude bokför bara när du ber om det och visar allt den bokfört.",
+      "version": "0.7.0"
     },
     {
       "name": "numera-mac",

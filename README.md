@@ -76,7 +76,8 @@ Du kan också skriva **/** i chatten och välja ett av Numeras kommandon i lista
 |---|---|
 | **setup** | Kontrollerar att kopplingen fungerar och hjälper dig om något saknas |
 | **foretag** | Sätter upp ett nytt företag i chatten: slår upp organisationsnumret och frågar bara det som saknas |
-| **start** | Kort översikt: vinst, moms att betala och sista dag, pengar på banken, utkast |
+| **start** | Kort översikt: vinst, moms att betala och sista dag, pengar på banken, utkast, inkomna e-fakturor och det som behöver göras |
+| **faktura** | Skapar en faktura eller offert som utkast, gör den klar när du ber om det och säger hur den kan skickas (e-faktura, e-post eller PDF). Du skickar den själv med Skicka fakturan i Numera |
 | **bokfor** | Föreslår hur dina kvitton och fakturor ska bokföras och bokför när du ber om det. Ge Claude en bild eller PDF av ett kvitto så läggs den in i Numera |
 | **kolla** | Kör Numeras kontroller och letar efter fel och luckor, också i lönerna. Ändrar ingenting |
 | **moms** | Hjälper dig förbereda momsdeklarationen |
